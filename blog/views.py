@@ -16,8 +16,8 @@ def register():
 
         if len(username) < 1:
             flash('Your username must be at least one character.')
-        elif len(password) < 5:
-            flash('Your password must be at least 5 characters.')
+        elif len(password) < 3:
+            flash('Your password must be at least 3 characters.')
         elif not User(username).register(password):
             flash('A user with that username already exists.')
         else:
